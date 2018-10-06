@@ -1,84 +1,68 @@
 body {
   padding: 10px;
-  background-color: #C6B9A0;
-}
+  background-color: #C6B9A0; }
 
-.hero{
- margin: 0 60px;
-}
+.hero {
+  margin: 0 60px; }
 
 .navbar {
-  background-color: #F3F1EB;
-}
+  background-color: #F3F1EB; }
 
-.title-logo{
-  color : #19A8AE;
-  font-size: 2em;
-}
+.title-logo {
+  color: #19A8AE;
+  font-size: 2em; }
 
 .is-primary-color {
   background-color: #A53D48;
-  color : white;
-  /* color : #A53D48; */
-}
+  color: white;
+  /* color : #A53D48; */ }
 
 .is-secondary-color {
-  background-color : #C6B9A0;
-}
+  background-color: #C6B9A0; }
 
 .is-third-color {
-  background-color: #F3F1EB;
-}
+  background-color: #F3F1EB; }
 
 .is-fourth-color {
   background-color: #19A8AE;
-  color : white;
-}
+  color: white; }
 
 .is-fifth-color {
-  background-color : #574D47;
-  color : white;
-}
+  background-color: #574D47;
+  color: white; }
 
 .subtitle {
   font-size: 3em;
-  text-align: center;
-}
+  text-align: center; }
 
 .scrolling-wrapper-flexbox {
   display: flex;
   flex-wrap: nowrap;
-  overflow-x: auto;
+  overflow-x: auto; }
 
-}
 .card {
-  flex: 0 0 auto;
-}
+  flex: 0 0 auto; }
 
 .how-to-section {
   border-style: solid;
   border-radius: 15px;
-  border : 2px 2px;
+  border: 2px 2px;
   border-color: #574D47;
   background-color: #F3F1EB;
-  margin: 30px;
-}
+  margin: 30px; }
 
-.social-wall-headline{
+.social-wall-headline {
   text-align: center;
   color: #574D47;
-  font-size: 2em;
-}
+  font-size: 2em; }
 
-.on{
-  color: #A53D48;
-}
+.on {
+  color: #A53D48; }
 
 /* dynamic hero */
-
 * {
-  box-sizing: border-box;
-}
+  box-sizing: border-box; }
+
 .box {
   padding: 40px;
   top: 50%;
@@ -89,16 +73,16 @@ body {
   font-weight: bold;
   font-size: 2rem;
   color: #333333;
-  background-color: #F3F1EB;
-}
+  background-color: #F3F1EB; }
+
 .box .swap {
   display: inline-block;
   position: relative;
   min-width: 1em;
   min-height: 1em;
   transition-duration: 0.5s;
-  transition-property: transform width;
-}
+  transition-property: transform width; }
+
 .box .swap li {
   position: absolute;
   top: 0;
@@ -110,9 +94,9 @@ body {
   background-color: #19A8AE;
   color: #c5f7ed;
   transition-duration: 0.5s;
-  transition-property: opacity;
-}
-.box .swap li.visible {
-  opacity: 1;
-}
+  transition-property: opacity; }
 
+.box .swap li.visible {
+  opacity: 1; }
+
+/*# sourceMappingURL=style.css.map */
