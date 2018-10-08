@@ -3,8 +3,9 @@ const Recipe = require("../models/recipe")
 const mongoose = require('mongoose');
 
 
-mongoose.connect('mongodb://localhost/chefette');
+/* mongoose.connect('mongodb://localhost/chefette'); */
 
+mongoose.connect('mongodb://heroku_jr038469:9irt8rffomp408i6lthqfr0mk5@ds123963.mlab.com:23963/heroku_jr038469');
 
 const recipes = [
       { 

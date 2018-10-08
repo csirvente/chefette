@@ -1,43 +1,32 @@
-body {
-  padding: 10px;
-  background-color: #C6B9A0;
-}
 
-.hero{
- margin: 0 60px;
-}
 
-.navbar {
-  background-color: #F3F1EB;
-}
-
-.title-logo{
-  color : #19A8AE;
-  font-size: 2em;
+.is-primary {
+  background-color: #19a8ae; /* color a3f7ec*/
+  color: #19a8ae;
 }
 
 .is-primary-color {
-  background-color: #A53D48;
-  color : white;
+  background-color: #a53d48;
+  color: white;
   /* color : #A53D48; */
 }
 
 .is-secondary-color {
-  background-color : #C6B9A0;
+  background-color: #c6b9a0;
 }
 
 .is-third-color {
-  background-color: #F3F1EB;
+  background-color: #f9f9f4;
 }
 
 .is-fourth-color {
-  background-color: #19A8AE;
-  color : white;
+  background-color: #19a8ae;
+  color: white;
 }
 
 .is-fifth-color {
-  background-color : #574D47;
-  color : white;
+  background-color: #574d47;
+  color: white;
 }
 
 .subtitle {
@@ -49,7 +38,7 @@ body {
   display: flex;
   flex-wrap: nowrap;
   overflow-x: auto;
-
+  border-radius: 5px;
 }
 .card {
   flex: 0 0 auto;
@@ -57,21 +46,21 @@ body {
 
 .how-to-section {
   border-style: solid;
-  border-radius: 15px;
-  border : 2px 2px;
-  border-color: #574D47;
-  background-color: #F3F1EB;
+  border-radius: 5px;
+  border: 2px 2px;
+  border-color: #574d47;
+  background-color: #f9f9f4;
   margin: 30px;
 }
 
-.social-wall-headline{
+.social-wall-headline {
   text-align: center;
-  color: #574D47;
+  color: #574d47;
   font-size: 2em;
 }
 
-.on{
-  color: #A53D48;
+.on {
+  color: #a53d48;
 }
 
 /* dynamic hero */
@@ -89,7 +78,7 @@ body {
   font-weight: bold;
   font-size: 2rem;
   color: #333333;
-  background-color: #F3F1EB;
+  background-color: #f9f9f4;
 }
 .box .swap {
   display: inline-block;
@@ -107,7 +96,7 @@ body {
   white-space: nowrap;
   border-radius: 0.2em;
   padding: 0.2em 0.5em;
-  background-color: #19A8AE;
+  background-color: #19a8ae;
   color: #c5f7ed;
   transition-duration: 0.5s;
   transition-property: opacity;
@@ -116,3 +105,148 @@ body {
   opacity: 1;
 }
 
+
+body {
+  padding: 10px;
+  background-color: #f9f9f4;
+}
+
+.hero {
+  background: url(http://iamafoodblog.com/wp-content/uploads/2018/05/salmon-meal-prep_2412w.jpg) center / cover;
+}
+
+.opacity-image {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+/* navbar start */
+
+.title-logo {
+  color: #a53d48;
+  font-size: 2em;
+  font-family: "Varela Round", sans-serif;
+}
+
+.navbar {
+  background-color: #f9f9f4;
+  border-radius: 5px;
+}
+
+.navbar-item img {
+  max-height: 5rem;
+}
+
+.navbar-menu{
+  align-items: center;
+  display: inline-flex;
+}
+
+@media (max-width: 800px){
+.title-menu{
+  display: none
+}}
+
+@media screen and (min-width: 100px){
+.navbar-start {
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    margin-right: auto;
+}}
+
+
+@media screen and (min-width: 100px){
+.navbar-menu {
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+}}
+
+@media screen and (min-width: 100px){
+  .navbar, .navbar-end, .navbar-menu, .navbar-start {
+      -ms-flex-align: stretch;
+      display: -ms-flexbox;
+      display: flex;
+  }}
+
+@media all and (min-width: 100px){
+.navbar-dropdown {
+    background-color: #fff;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-top: 1px solid #dbdbdb;
+    -webkit-box-shadow: 0 8px 8px rgba(10,10,10,.1);
+    box-shadow: 0 8px 8px rgba(10,10,10,.1);
+    font-size: .875rem;
+    left: 0;
+    min-width: 100%;
+    position: absolute;
+    top: 100%;
+    z-index: 20;
+}}
+
+@media all and (min-width: 100px){
+.navbar-item, .navbar-link {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}}
+
+@media all and (min-width: 100px){
+.navbar-item.has-dropdown.is-active .navbar-link, .navbar-item.has-dropdown:hover .navbar-link {
+    background-color: #f5f5f5;
+}}
+
+@media screen and (min-width: 100px){
+.navbar-link::after {
+    border: 1px solid #c6b9a0;
+    border-right: 0;
+    border-top: 0;
+    content: " ";
+    display: block;
+    height: .5em;
+    pointer-events: none;
+    position: absolute;
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    width: .5em;
+    margin-top: -.375em;
+    right: 1.125em;
+    top: 50%;
+}}
+
+@media all and (min-width: 100px){
+.navbar-menu {
+    -webkit-box-shadow: none; /* 0 8px 16px rgba(10,10,10,.1); */
+    box-shadow: none ;
+   /*  0 8px 16px rgba(10,10,10,.1); */
+    padding: .5rem 0;
+}}
+
+.navbar {
+      -webkit-box-shadow: 0 8px 16px rgba(10,10,10,.1);
+      box-shadow: 0 8px 16px rgba(10,10,10,.1);
+      padding: .5rem 0;
+  }
+
+
+.navbar-item {
+  display: flex;
+  align-items: center;
+}
+
+
+.fas{
+  font-size: 25px;
+  width: 25px;
+  color: #c6b9a0;
+}
+
+
+
+/* navbar end */
