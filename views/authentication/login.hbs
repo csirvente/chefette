@@ -1,4 +1,4 @@
-<h1>Login</h1>
+{{!-- <h1>Login</h1>
 
 <form action="/login" method="POST">
   <div>
@@ -15,4 +15,40 @@
   <div>
     <input type="submit" value="Log In">
   </div>
+</form> --}}
+
+
+
+<form action="/login" method="POST">
+<div class="box form-signin-signup column is-half">
+<div class="field">
+  <p class="control has-icons-left has-icons-right">
+    <input class="input" type="email" placeholder="Email"  name="username">
+    <span class="icon is-small is-left">
+      <i class="fas fa-envelope"></i>
+    </span>
+    <span class="icon is-small is-right">
+      <i class="fas fa-check"></i>
+    </span>
+  </p>
+</div>
+<div class="field">
+  <p class="control has-icons-left">
+    <input class="input" type="password" placeholder="Password" name="password">
+    <span class="icon is-small is-left">
+      <i class="fas fa-lock"></i>
+    </span>
+  </p>
+</div>
+  {{#if message}}
+    <div class="error-message">{{ message }}</div>
+  {{/if}}
+<div class="field">
+  <p class="control">
+    <button class="button is-success">
+      Login
+    </button>
+  </p>
+</div>
+</div>
 </form>

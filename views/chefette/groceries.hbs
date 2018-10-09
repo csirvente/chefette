@@ -1,0 +1,104 @@
+{{#if user}}
+
+{{!-- nav bar --}}
+
+<nav class="navbar is-paddingless" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a class="navbar-item" href="https://chefette.app">
+      <img src="/images/chef-icon.png" width="40" height="40">
+      <h1 class="title-logo title-menu is-hidden-mobile">
+        {{title}}
+      </h1>
+    </a>
+
+    {{!-- <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a> --}}
+  </div>
+
+  <div id="navbarBasicExample" class="navbar-menu is-flex-mobile">
+    <div class="navbar-start">
+
+      <a class="navbar-item " href="/meals">
+        <i class="fas fa-utensils"></i><span class="title-menu"> &nbsp;Meals</span>
+      </a>
+
+      <a class="navbar-item" href="/groceries">
+        <i class="fas fa-shopping-basket"></i><span class="title-menu"> &nbsp;Groceries</span>
+
+      </a>
+
+      <a class="navbar-item">
+        <img src="/images/icon-stone-cook.png" alt="cook icon" class="fas"><span class="title-menu"> &nbsp;Cook</span>
+      </a>
+    </div>
+
+    <div class="navbar-end">
+      <div class="navbar-item has-dropdown is-hoverable">
+
+        <a class="navbar-link">
+          <i class="fas fa-user"></i><span class="title-menu">Preferences</span>
+        </a>
+
+        <div class="navbar-dropdown">
+
+          <a href="/logout" class="navbar-item">Logout</a>
+
+          <a class="navbar-item">
+            About
+          </a>
+          <a class="navbar-item">
+            Contact
+          </a>
+          <hr class="navbar-divider">
+          <a class="navbar-item">
+            Report an issue
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</nav>
+
+
+
+
+
+{{!-- My recipes --}}
+
+<div class="container">
+
+  <div class="hero-body titles-meals has-text-centered"></div>
+  <div class="container-fluid">
+
+    <div class="box subtitle titles-meals-text">
+      <p class="is-size-3">Get deliver your</p>
+      <h2 class="fancy-text">shopping list</h2>
+    </div>
+  </div>
+</div>
+
+
+{{!-- groceries --}}
+
+<section class="section has-background-light">
+  <div class="container">
+    <div class="columns scrolling-wrapper-flexbox">
+
+      {{#each user.0.recipes}}
+      <div class="column is-one-quarter card box is-paddingless box-recette">
+        
+        {{this.ingredients}}
+        
+      </div>
+
+      {{/each}}
+    </div>
+  </div>
+</section>
+
+
+{{/if}}

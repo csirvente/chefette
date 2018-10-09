@@ -11,7 +11,7 @@
       </h1>
     </a>
 
-{{!--     <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+    {{!-- <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
       <span aria-hidden="true"></span>
       <span aria-hidden="true"></span>
       <span aria-hidden="true"></span>
@@ -25,28 +25,26 @@
         <i class="fas fa-utensils"></i><span class="title-menu"> &nbsp;Meals</span>
       </a>
 
-      <a class="navbar-item">
-       <i class="fas fa-shopping-basket"></i><span class="title-menu"> &nbsp;Groceries</span>
-
+      <a class="navbar-item" href="/groceries">
+        <i class="fas fa-shopping-basket"></i><span class="title-menu"> &nbsp;Groceries</span>
       </a>
 
       <a class="navbar-item">
-        <img src="/images/icon-stone-cook.png" alt="cook icon" class="fas"><span class="title-menu">  &nbsp;Cook</span>
-        {{!-- <span class="bd-emoji">🍳</span> --}}
+        <img src="/images/icon-stone-cook.png" alt="cook icon" class="fas"><span class="title-menu"> &nbsp;Cook</span>
       </a>
     </div>
 
     <div class="navbar-end">
       <div class="navbar-item has-dropdown is-hoverable">
-        
+
         <a class="navbar-link">
-         <i class="fas fa-user"></i><span class="title-menu">Preferences</span> 
+          <i class="fas fa-user"></i><span class="title-menu">Preferences</span>
         </a>
 
         <div class="navbar-dropdown">
-          <a class="navbar-item">
-            Logout
-          </a>
+            
+          <a href="/logout"  class="navbar-item">Logout</a>
+          
           <a class="navbar-item">
             About
           </a>
@@ -71,22 +69,72 @@
 {{!-- My recipes --}}
 
 <div class="container">
-  <div class="content">
-    <h1 class="subtitle">Added meals</h1>
-    <p>Your yummy recipes</p>
+
+  <div class="hero-body titles-meals has-text-centered"></div>
+  <div class="container-fluid">
+
+    <div class="box subtitle titles-meals-text">
+      <p class="is-size-3">My yummy</p>
+            <h2 class="fancy-text">meals</h2>
+    </div>
   </div>
-  <div>
-    {{#each user.0.recipes}}
-    <li>{{this.title}} <a href="/meals/{{this._id}}"> See more </a> <br> </li>
-    {{/each}}
+
+<section class="section has-background-light">
+  <div class="container">
+    <div class="columns scrolling-wrapper-flexbox">
+
+      {{#each user.0.recipes}}
+      <div class="column is-one-quarter card box is-paddingless box-recette">
+        <article class="media notification  fiche-recette">
+          <div class="media-content">
+            <div class="content">
+              <figure class="image">
+                <img src="{{this.image}}">
+              </figure>
+
+              <div class="fiche-recette-text">
+                <h1 class="title is-size-5">{{this.title}}</h1>
+                <p class="is-size-6">
+                  <i class="fas fa-globe-americas"></i> {{this.cousine}} <i class="fas fa-stopwatch"></i> {{this.duration}}'
+                </p>
+
+                <div class="buttons-recipe columns">
+                  <form method="get" action="/meals/{{this._id}}">
+                    <button type="submit" class="button is-fourth-color">Cook it!</button>
+                  </form>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </article>
+      </div>
+      {{/each}}
+    </div>
   </div>
+</section>
+
+{{!-- <div>
+  {{#each user.0.recipes}}
+  <li>{{this.title}} <a href="/meals/{{this._id}}"> See more </a> <br> </li>
+  {{/each}}
+</div> --}}
+
+
+
+
 </div>
 
 {{!-- recipe catalog --}}
 <div class="container">
-  <div class="content">
-    <h1 class="subtitle">My meals</h1>
-    <p>Plan your next recipes</p>
+
+    <div class="hero-body titles-meals has-text-centered"></div>
+  <div class="container-fluid">
+
+    <div class="box subtitle titles-meals-text">
+      <p class="is-size-3">Plan your next</p>
+      <h2 class="fancy-text">Recipes</h2>
+    </div>
   </div>
 
   <section class="section has-background-light">
@@ -95,28 +143,33 @@
 
 
         {{#each resultsRecipes}}
-
-        <div class="column is-one-third card">
-          <article class="media notification is-primary-color">
-            <figure class="media-left">
-              <span class="icon is-medium">
-                <i class="fab fa-2x fa-css3-alt"></i>
-              </span>
-            </figure>
+        <div class="column is-one-quarter card box is-paddingless box-recette">
+          <article class="media notification  fiche-recette">
             <div class="media-content">
               <div class="content">
-                <h1 class="title is-size-4">{{this.title}}</h1>
-                <p class="is-size-5">
-                  Bulma is a modern CSS framework from @jgthms, based on Flexbox.
-                  Using Bulma, we can describe our website's design using just classes. <span class="emoticon">ᕕ( ᐛ )ᕗ</span>
-                </p>
-                <div> <a href="/meals/{{this._id}}"> Cook it! </a> </div>
-                <button class="recipe-item button"  attr-recipe-id="{{this._id}}"> add </button>
+                <figure class="image">
+                  <img src="{{this.image}}">
+                </figure>
+
+                <div class="fiche-recette-text">
+                  <h1 class="title is-size-5">{{this.title}}</h1>
+                  <p class="is-size-6">
+                    <i class="fas fa-globe-americas"></i> {{this.cousine}} <i class="fas fa-stopwatch"></i> {{this.duration}}'
+                  </p>
+
+                  <div class="buttons-recipe columns">
+                    <button class="recipe-item button is-fourth-color" attr-recipe-id="{{this._id}}"> add </button>
+                    <form method="get" action="/meals/{{this._id}}">
+                      <button type="submit" class="button is-secondary-color">Cook it!</button>
+                    </form>
+                  </div>
+
+                </div>
+
               </div>
             </div>
           </article>
         </div>
-
         {{/each}}
 
       </div>

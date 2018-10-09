@@ -71,10 +71,33 @@ router.post('/add-recipe', (req, res) => {
   })
   .catch((err) => {
     console.log("An error happened:" + err);
+  });  
+});
+
+
+router.get('/groceries', ensureLogin.ensureLoggedIn(), function(req, res, next) {
+  
+  Recipes.find()  
+  .then((resultsRecipes) => {
+    console.log("This is all the results found", resultsRecipes)
+    //Myrecipes
+    User.find({'_id': req.user._id})
+    .populate('recipes')
+    .then(user => {
+      console.log(user)
+      if (!user) {
+          return res.status(404).render('not-found');
+      }
+      res.render('chefette/groceries', {resultsRecipes, user})
+    })
+    .catch(next)
+  })
+  .catch((err) => {
+    console.log("An error happened:" + err);
   });
 
-  
-});
+
+})
 
 
 module.exports = router;

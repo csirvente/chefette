@@ -96,7 +96,8 @@ body {
   background-color: #f9f9f4; }
 
 .hero {
-  background: url(http://iamafoodblog.com/wp-content/uploads/2018/05/salmon-meal-prep_2412w.jpg) center/cover; }
+  background: url(../images/hero-salmon-meal-prep-large.jpg) center/cover;
+  /* http://iamafoodblog.com/wp-content/uploads/2018/05/salmon-meal-prep_2412w.jpg */ }
 
 .opacity-image {
   background-color: rgba(255, 255, 255, 0.5); }
@@ -211,5 +212,63 @@ body {
   color: #c6b9a0; }
 
 /* navbar end */
+.fiche-recette {
+  box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
+  /* background: -webkit-gradient(linear, left top, left bottom, color-stop(60%, rgb(198, 185, 160)), to(rgba(198, 185, 160, 0.5))); */
+  padding: 10px;
+  margin: 0 10px;
+  border-radius: 15px;
+  background-color: #c6b9a0;
+  /*  overflow: auto; */
+  /*   height: 360px; */ }
+
+.box-recette {
+  box-shadow: none;
+  /*  box-shadow: 0 2px 3px rgba(10,10,10,.1), 0 0 0 1px rgba(10,10,10,.1); */ }
+
+.image img {
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(10, 10, 10, 0.1); }
+
+.fiche-recette-text {
+  background-color: #c6b9a0;
+  padding: 10px;
+  border-radius: 15px;
+  background-color: #f9f9f4;
+  /*   display: flex;
+  flex-flow: column;
+  height: 100%;
+  overflow: auto; */
+  height: 215px;
+  box-shadow: 0 8px 16px rgba(10, 10, 10, 0.1); }
+
+/* .fiche-recette-content{
+  display: flex;
+} */
+.buttons-recipe {
+  padding: 3px;
+  margin: 3px; }
+
+.titles-meals {
+  padding: 20px;
+  display: inline;
+  margin: auto; }
+
+.titles-meals-text {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: lighter;
+  padding: 20px; }
+
+.fancy-text {
+  border-radius: 0.2em;
+  padding: 0.2em 0.5em;
+  background-color: #19a8ae;
+  color: #c5f7ed;
+  margin: 10px; }
+
+.form-signin-signup {
+  margin: auto; }
 
 /*# sourceMappingURL=style.css.map */
