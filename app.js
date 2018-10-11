@@ -20,7 +20,7 @@ const path         = require('path');
 
 mongoose.Promise = Promise;
 mongoose
-  .connect(process.env.MONGO_URI || 'mongodb://localhost/chefette', {useMongoClient: true})
+  .connect(process.env.MONGODB_URI || 'mongodb://localhost/chefette', {useMongoClient: true})
   .then(() => {
     console.log('Connected to Mongo!')
   }).catch(err => {
