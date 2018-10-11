@@ -88,14 +88,33 @@
   <div class="container">
     <div class="columns scrolling-wrapper-flexbox">
 
-      {{#each user.0.recipes}}
-      <div class="column is-one-quarter card box is-paddingless box-recette">
-        
-        {{this.ingredients}}
-        
-      </div>
+      <table class="table">
+        <tr>
+          <th>Buy</th>
+          <th>ingredients</th>
+        </tr>
+        {{#each myIngredients}}
+        {{!-- <div>{{this}}</div> <br> --}}
 
-      {{/each}}
+        <tr>
+          <td>
+            <label class="container">
+              <input type="checkbox" unchecked="unchecked">
+              <span class="checkmark"></span>
+            </label>
+          </td>
+          <td>{{this}}</td>
+        </tr>
+
+        {{/each}}
+      </table>
+
+      {{!-- {{#each user.0.recipes}}
+      <div class="column is-one-quarter card box is-paddingless box-recette">
+        {{this.ingredients}}
+      </div>
+      {{/each}} --}}
+
     </div>
   </div>
 </section>
